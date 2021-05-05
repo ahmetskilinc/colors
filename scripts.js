@@ -15,8 +15,6 @@ function newColour() {
 
 function getHexName() {
 	const colour = "#" + document.getElementById("hexInput").value;
-	console.log(colour);
-	const colourName = ntc.name(colour)[1];
 	getColourAndChangeShit(colour);
 }
 
