@@ -3,83 +3,26 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<style>
-			* {
-				transition: all 0.45s;
-			}
-
-			body {
-				padding: 0;
-				margin: 0;
-				height: 100vh;
-				width: 100vw;
-				display: block;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				text-align: center;
-				font-family: "Roboto-Mono", monospace;
-			}
-
-			button {
-				padding: 14px 24px;
-				border-radius: 6px;
-				background-color: #efefef;
-				border: none;
-				font-size: 16px;
-			}
-		</style>
-		<title>Colors</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>colours</title>
 	</head>
 	<body>
 		<div>
-			<p>Check your JavaScript console.</p>
-			<p>Press Return/Enter or the button below.</p>
-			<button onclick="newColor()">New Color</button>
-			<p id="colorOutput">Your color details will appear here.</p>
+			<div>
+				<p>Get a new random colour</p>
+				<button onclick="newColour()">Get New Colour</button>
+				<p id="colourOutput">Your colour details will appear here.</p>
+			</div>
+			<hr />
+			<div>
+				<p>Get a name for your hex value</p>
+				<input id="hexInput" placeholder="Enter hex value..." type="text" minlength="6" maxlength="6" />
+				<button onclick="getHexName()">Get New Colour</button>
+				<p id="nameOutput">Your colour details will appear here.</p>
+			</div>
 		</div>
 	</body>
-	<script>
-		var hex = [
-			"0",
-			"1",
-			"2",
-			"3",
-			"4",
-			"5",
-			"6",
-			"7",
-			"8",
-			"9",
-			"a",
-			"b",
-			"c",
-			"d",
-			"e",
-			"f"
-		];
-
-		document.body.addEventListener("keyup", function(e) {
-			if (e.keyCode == 13) {
-				newColor();
-			}
-		});
-
-		function newColor() {
-			var color = "#";
-			for (var i = 0; i < 6; i++) {
-				var ranNum = Math.floor(Math.random() * 16);
-				color = color + hex[ranNum];
-			}
-			color = color.toUpperCase();
-			var n_match = ntc.name(color);
-			const colorName = n_match[1];
-			document.body.style.background = color;
-			console.log("Color: " + colorName + "\nHex Value: " + color);
-			document.getElementById("colorOutput").innerHTML =
-				"Color: " + colorName + " | Hex Value: " + color;
-			window.document.title = colorName + " - " + color;
-		}
-	</script>
-	<script type="text/javascript" src="./colors.js"></script>
+	<script type="text/javascript" src="./scripts.js"></script>
+	<script type="text/javascript" src="./colours.js"></script>
 </html>
