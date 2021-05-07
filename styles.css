@@ -35,7 +35,7 @@ input::placeholder {
 
 .get-new-colour,
 .check-colour {
-	background-color: #ececec;
+	background-color: #ececec46;
 	border-radius: 6px;
 	padding: 28px;
 }
