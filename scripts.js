@@ -6,16 +6,26 @@ document.body.addEventListener("keyup", function (e) {
 
 const runNewColour = (get) => {
 	let colour;
+	const hexInput = document.getElementById("hexInput").value;
+	const hexCheck = /^#([0-9a-f]{3}|[0-9a-f]{6})$/i;
+
 	if (get) {
 		colour =
 			"#" +
 			Math.floor(Math.random() * 16777215)
 				.toString(16)
 				.toUpperCase();
+		getColourAndChangeShit(colour, get);
 	} else {
-		colour = "#" + document.getElementById("hexInput").value;
+		colour = "#" + hexInput;
+		if (hexInput.length === 3 || (hexInput.length === 6 && hexInput.match(hexCheck))) {
+			getColourAndChangeShit(colour, get);
+		} else {
+			document.getElementById(
+				get ? "colourOutput" : "nameOutput"
+			).innerHTML = `<p style="color:red;">Please enter a valid hex value</p><p style="color:red;">(length: 3 or 6 characters)</p>`;
+		}
 	}
-	getColourAndChangeShit(colour, get);
 };
 
 const getColourAndChangeShit = (colour, get) => {
