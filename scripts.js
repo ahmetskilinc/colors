@@ -7,7 +7,7 @@ document.body.addEventListener("keyup", function (e) {
 const runNewColour = (get) => {
 	let colour;
 	const hexInput = document.getElementById("hexInput").value;
-	const hexCheck = /^#([0-9a-f]{3}|[0-9a-f]{6})$/i;
+	const hexCheck = /^([0-9a-f]{3}|[0-9a-f]{6})$/i;
 
 	if (get) {
 		colour =
@@ -18,7 +18,7 @@ const runNewColour = (get) => {
 		getColourAndChangeShit(colour, get);
 	} else {
 		colour = "#" + hexInput;
-		if (hexInput.length === 3 || (hexInput.length === 6 && hexInput.match(hexCheck))) {
+		if (hexInput.match(hexCheck)) {
 			getColourAndChangeShit(colour, get);
 		} else {
 			document.getElementById(
