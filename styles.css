@@ -1,5 +1,7 @@
 * {
 	transition: all 0.45s;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -15,13 +17,25 @@ input,
 button {
 	padding: 14px 24px;
 	border-radius: 6px;
-	background-color: #efefef;
+	background-color: #c4c4c4;
+	color: #ffffff;
 	border: none;
 	font-size: 16px;
+	margin: 24px 0;
 }
 
-hr {
-	width: 400px;
-	background-color: #000000;
-	border-color: #000000;
+input::placeholder {
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+.get-new-colour {
+	margin-bottom: 30px;
+}
+
+.get-new-colour,
+.check-colour {
+	background-color: #ececec;
+	border-radius: 6px;
+	padding: 28px;
 }

@@ -5,21 +5,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
 		<link rel="stylesheet" href="styles.css" />
-		<title>colours</title>
+		<title>Colours</title>
 	</head>
 	<body>
 		<div>
-			<div>
+			<div class="get-new-colour">
 				<p>Get a new random colour</p>
-				<button onclick="newColour()">Get New Colour</button>
-				<p id="colourOutput">Your colour details will appear here.</p>
+				<button onclick="runNewColour(true)">Get New Colour</button>
+				<div id="colourOutput">
+					<p>Your colour details will appear here.</p>
+					<p>&nbsp;</p>
+				</div>
 			</div>
-			<hr />
-			<div>
+			<div class="check-colour">
 				<p>Get a name for your hex value</p>
 				<input id="hexInput" placeholder="Enter hex value..." type="text" minlength="6" maxlength="6" />
-				<button onclick="getHexName()">Get New Colour</button>
-				<p id="nameOutput">Your colour details will appear here.</p>
+				<button onclick="runNewColour(false)">Check Colour</button>
+				<div id="nameOutput">
+					<p>Your colour details will appear here.</p>
+					<p>&nbsp;</p>
+				</div>
 			</div>
 		</div>
 	</body>
