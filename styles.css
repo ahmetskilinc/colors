@@ -13,20 +13,29 @@ body {
 	font-family: "Roboto-Mono", monospace;
 }
 
+p {
+	font-size: 12px;
+}
+
 input,
 button {
-	padding: 14px 24px;
 	border-radius: 6px;
-	background-color: #c4c4c4;
-	color: #ffffff;
+	background-color: #ffffff7e;
+	color: #000000;
 	border: none;
-	font-size: 16px;
-	margin: 24px 0;
+	padding: 10px 18px;
+	font-size: 12px;
+	margin: 20px 0;
+	box-shadow: 0px 10px 20px 0px #7e7e7e9c;
 }
 
 input::placeholder {
-	color: #ffffff;
+	color: #444444;
 	opacity: 0.9;
+}
+
+input {
+	width: 128px;
 }
 
 .get-new-colour {
@@ -37,5 +46,5 @@ input::placeholder {
 .check-colour {
 	background-color: #ececec46;
 	border-radius: 6px;
-	padding: 28px;
+	padding: 22px;
 }
